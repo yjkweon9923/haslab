@@ -28,6 +28,12 @@
   .joined a:hover { border-color: var(--green); color: var(--green); background: var(--green-tint); }
   .hero-image { height: clamp(320px, 62vw, 680px); overflow: hidden; }
   .hero-image img { object-position: center 70%; }
+  .hero-image { position: relative; }
+  .hero-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(1,30,0,.78) 0%, rgba(1,30,0,.45) 45%, rgba(1,30,0,0) 80%), linear-gradient(0deg, rgba(1,30,0,.55) 0%, rgba(1,30,0,0) 45%); }
+  .hero-copy { position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column; justify-content: center; color: #fff; }
+  .hero-copy .en { font-size: clamp(44px, 9vw, 120px); line-height: .98; letter-spacing: -.045em; font-weight: 800; }
+  .hero-copy .en em { font-style: normal; color: var(--green-mint); }
+  .hero-copy .ko { margin-top: clamp(16px, 2.4vw, 32px); max-width: 560px; font-size: clamp(15px, 1.6vw, 19px); line-height: 1.75; color: rgba(255,255,255,.88); }
 
   /* Intro statement */
   .intro { text-align: center; }
@@ -224,7 +230,15 @@
     </div>
   </div>
 </header>
-<div class="hero-image reveal"><img src="assets/janeswalk.jpg" alt="호서대학교 아산캠퍼스 제인스 워크 활동 단체 사진"></div>
+<div class="hero-image reveal">
+  <img src="assets/janeswalk.jpg" alt="호서대학교 아산캠퍼스 제인스 워크 활동 단체 사진">
+  <div class="hero-copy">
+    <div class="wrap">
+      <p class="en" lang="en">Designing<br><em>Happy Spaces</em>.</p>
+      <p class="ko">공간 디자인으로 행복한 공간을 만듭니다. H.A.S. Design Lab은 사람의 심리와 행태를 실험으로 읽어 내고, 모두의 일상이 조금 더 행복해지는 공간을 설계합니다.</p>
+    </div>
+  </div>
+</div>
 
 <section class="intro">
   <div class="wrap">
